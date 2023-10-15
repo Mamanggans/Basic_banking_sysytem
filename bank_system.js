@@ -13,7 +13,7 @@ class BankAccount {
     Deposit() {
       const addBalance = () => {
         var tambahan = parseFloat(prompt("Masukkan jumlah saldo yang ingin ditambahkan: "));
-        if (!isNaN(tambahan) && tambahan >= 1000) {
+        if (!isNaN(tambahan) && tambahan >= 0) {
           this.saldo += tambahan;
           this.updateSaldo();
           var lanjutkan = window.confirm(`Sisa saldo anda sekarang adalah: ${this.saldo}. Apakah ingin menambahkan? Klik "Cancel" jika tidak ingin lanjut.`);
@@ -44,14 +44,14 @@ class BankAccount {
             if (!lanjutkan) {
               return;
             }
-            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
+            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik.
           } else {
             alert("Jumlah yang ingin Anda kurangkan melebihi saldo yang tersedia.");
-            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
+            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik.
           }
         } else {
           alert("Input tidak valid. Masukkan angka yang valid.");
-          setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
+          setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik.
         }
       };
   
