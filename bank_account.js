@@ -11,18 +11,20 @@ class BankAccount {
     tambahSaldo() {
         while (true) {
             var tambahan = parseFloat(prompt("Masukkan jumlah saldo yang ingin ditambahkan: "));
-            if (!isNaN(tambahan)&& tambahan >= 0) {
+            setTimeout(() => {
+                if (!isNaN(tambahan)&& tambahan >= 0) {
                 this.saldo += tambahan;
                 this.updateSaldo();
                 var lanjutkan = window.confirm(`Sisa saldo anda sekarang adalah: ${this.saldo}. Apakah ingin menambahkan? Klik "Cancel" jika tidak ingin lanjut.`);
                 if (!lanjutkan) {
-                    break;
+                    2000;
                 }
             } else if (isNaN(tambahan)){
                 alert("Input tidak valid. Masukkan angka yang valid."); 
             } else if (tambahan <= 0){
                 alert ("masukin lebih dari 0");
             }
+        }, 2000);
         }
     }
     kurangiSaldo() {
