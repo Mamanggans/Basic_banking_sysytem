@@ -28,25 +28,21 @@ class BankAccount {
     kurangiSaldo() {
         while (true) {
             var pengurangan = parseFloat(prompt("Masukkan jumlah saldo yang ingin dikurangkan: "));
-            if (!isNaN(pengurangan) && pengurangan >= 0) {
-                if (pengurangan <= saldo) {
+            if (!isNaN(pengurangan)) {
                     this.saldo -= pengurangan;
                     this.updateSaldo();
                     var lanjutkan = window.confirm(`Sisa saldo anda sekarang adalah: ${this.saldo}. Apakah ingin mengurangkan? Klik "Cancel" jika tidak ingin lanjut.`);
                     if (!lanjutkan) {
                         break;
                     }
-                } else {
+                } else if (pengurangan <= saldo) {
                     alert("Jumlah yang ingin Anda kurangkan melebihi saldo yang tersedia.");
-                }
-            } else if (isNaN(tambahan)){
-                alert("Input tidak valid. Masukkan angka yang valid."); 
-            } else {
-                alert ("masukin lebih dari 0");
+                } else {
+                alert("Input tidak valid. Masukkan angka yang valid.");
             }
         }
-    }
-}
+    }}
+
 
 const bankAccount = new BankAccount();
 bankAccount.updateSaldo(); 
