@@ -20,13 +20,13 @@ class BankAccount {
           if (!lanjutkan) {
             return;
           }
-          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 0 detik (asynchronous).
+          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 1 detik (asynchronous).
         } else if (isNaN(tambahan)) {
           alert("Input tidak valid. Masukkan angka yang valid.");
-          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 0 detik (asynchronous).
+          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 1 detik (asynchronous).
         } else if (tambahan <= 0) {
           alert("Masukkan lebih dari 0");
-          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 0 detik (asynchronous).
+          setTimeout(addBalance, 1000); // Menunda operasi tambah saldo selama 1 detik (asynchronous).
         }
       };
   
@@ -44,14 +44,14 @@ class BankAccount {
             if (!lanjutkan) {
               return;
             }
-            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 0 detik (asynchronous).
+            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
           } else {
             alert("Jumlah yang ingin Anda kurangkan melebihi saldo yang tersedia.");
-            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 0 detik (asynchronous).
+            setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
           }
         } else {
           alert("Input tidak valid. Masukkan angka yang valid.");
-          setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 0 detik (asynchronous).
+          setTimeout(deductBalance, 1000); // Menunda operasi kurangi saldo selama 1 detik .
         }
       };
   
